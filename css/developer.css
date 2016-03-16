@@ -13,6 +13,9 @@
 .description > * {
   outline: 1px solid green;
 }
+.description > * > * {
+  outline: 1px solid red;
+}
 .preview-card {
   outline: 1px solid yellow;
 }
