@@ -1,0 +1,13 @@
+body {
+  padding: 20px;
+  min-width: 280px;
+  max-width: 1160px;
+  font-family: var(--font);
+  font-size: var(--font-size-primary);
+}
+a {
+  @apply --link-style;
+}
+a:focus {
+  outline: none;
+}

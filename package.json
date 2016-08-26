@@ -1,0 +1,24 @@
+{
+  "name": "my_site",
+  "version": "1.0.0",
+  "description": "Igor Yarutkin's GitHub site",
+  "main": "index.js",
+  "scripts": {
+    "test": "eslint .",
+    "start": "gulp serve"
+  },
+  "author": "Igor Yarutkin",
+  "devDependencies": {
+    "autoprefixer": "^6.4.0",
+    "browser-sync": "^2.14.0",
+    "del": "^2.2.2",
+    "eslint": "^3.4.0",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^6.1.1",
+    "gulp-pug": "^3.0.4",
+    "postcss-cssnext": "^2.7.0",
+    "postcss-import": "^8.1.2",
+    "postcss-normalize": "^0.3.0",
+    "run-sequence": "^1.2.2"
+  }
+}

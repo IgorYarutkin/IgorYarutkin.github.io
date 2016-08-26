@@ -1,0 +1,78 @@
+doctype html
+html(lang="ru")
+
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title Игорь Яруткин. Фронтенд-разработчик
+    link(rel="stylesheet", href="/css/style.css")
+
+  body
+
+    section.title
+      figure.title__avatar
+        img(src="img/avatar-mobile@1x.jpg" width="200" height="200" alt="Аватар")
+      h1.title__name
+        | Игорь Яруткин
+        span Фронтенд-разработчик
+      .title__description
+        p Верстаю удобные и красивые сайты. Работаю на фрилансе с января 2016г. Хочу работать в команде.
+        p  Делаю из&nbsp;макета сайт, который работает в&nbsp;популярных браузерах для смартфонов, планшетов и&nbsp;десктопов. Выполняю задачу в&nbsp;срок.
+        p Использую препроцессор SASS. Знаком с&nbsp;LESS и&nbsp;PostCSS. Пользуюсь шаблонизатором Pug/Jade. Пишу валидацию форм и&nbsp;шаблонизацию на&nbsp;JavaScript. Делаю проекты на&nbsp;Бутстрапе. Умею готовить Grunt и&nbsp;Gulp. Владею с&nbsp;Git, представляю как устроена командная разработка.
+          br
+          | Для всего сразу применяю главный инструмент&nbsp;&mdash; голову :)
+        p Если вам недостаточно портфолио, чтобы оценить мои навыки, пришлите мне тестовое задание&nbsp;на&nbsp;
+          a(href="mailto:igor.yarutkin@gmail.com") igor.yarutkin@gmail.com
+        p Или заходите сюда попозже. Количество выполненных проектов будет расти :)
+        .title__links-container
+          a.title__link.title__link--cv-letter(href="https://github.com/IgorYarutkin/CV-letter") Резюме
+          a.title__link.title__link--github(href="https://github.com/IgorYarutkin") Гитхаб
+
+    .features-list
+      h2.features-list__header Сверстал
+      //- Объявление миксина
+      mixin feature__link(name, title)
+        a.feature__link(href != "//igoryarutkin.github.io/" + name + "/")
+          img.feature__screenshot(src != "img/" + name + "-mobile@1x.png", width="300", height="200", alt != name)&attributes(attributes)
+          h3.feature__title
+            span.feature__title-content!= title
+
+
+      article.feature
+        +feature__link("pink", "Промо-сайт приложения «Пинк»")
+        .feature__description
+          | Полностью адаптивный макет. Использовал подход Mobile First. Сделал сетку на&nbsp;флексбоксах. Опробовал SASS и&nbsp;Grunt. Сделал адаптивные изображения. SVG собрал в&nbsp;спрайт, чтобы можно было стилизовать через CSS. Стилизация и&nbsp;валидация форм. Пиксель-пёрфект.
+
+      article.feature
+        +feature__link("gllacy", "Магазин мороженого «Глейси»")
+        .feature__description
+          | Пиксель-пёрфект вёрстка с&nbsp;фиксированной шириной. Построил сетку на&nbsp;флоатах и&nbsp;инлайн-блоках. Стилизовал элементы формы: чекбоксы, радио-кнопки и&nbsp;селекты. Сделал слайдер на&nbsp;чистом CSS. На&nbsp;JavaScript написал небольшую валидацию формы.
+
+      article.feature
+        +feature__link("sedona", "Сайт города Седона").feature__screenshot--white
+        .feature__description
+          | Сделал пиксель-пёрфект резиновую верстку. Валидацию формы реализовал на&nbsp;JavaScript.
+
+    .features-list
+      h2.features-list__header Учился
+      article.feature
+        +feature__link("htmlcss", "Интенсивный он-лайн курс «Базовый HTML и CSS»")(width="200" height="283")
+        .feature__description Научился верстать выбирая семантически правильные элементы. Теперь свободно работаю с&nbsp;Фотошопом в&nbsp;объеме для верстальщика: нарезка графики, выбор параметров текста, цвета, отступов. Легко создаю сетки на&nbsp;флоатах и&nbsp;инлайн-блоках и&nbsp;индивидуальный стиль чек-боксов, радио-кнопок, селекторов. Овладел базовыми навыками программирования на&nbsp;JavaScript. Научился работать с&nbsp;GitHub через GitHub Desktop.
+
+      article.feature
+        +feature__link("adaptive", "Интенсивный он-лайн курс «Продвинутый HTML и CSS»")(width="200" height="283")
+        .feature__description Овладел резиновой адаптивной версткой на&nbsp;flexbox с&nbsp;использованием методологии БЭМ. Повысил навыки работы с&nbsp;git до&nbsp;работы через консоль: создание веток, пулл-реквесты в&nbsp;мастер-репозиторий, слияние коммитов. Научился писать CSS с&nbsp;использованием препроцессора SASS. Легко создаю векторные спрайты и&nbsp;делаю стилизацию SVG-изображений через CSS. Призвал на&nbsp;помощь Grunt для автоматизации.
+
+      article.feature
+        +feature__link("javascript", "Интенсивный он-лайн курс «Базовый JavaScript»")(width="200" height="283")
+        .feature__description Теперь могу программировать базовые вещи на&nbsp;JavaScript: функции, модульный код, AJAX (JSONP и&nbsp;XMLHttpRequest), валидация форм. Понял суть и&nbsp;цель использования callback-функций и&nbsp;замыканий. Могу работать с&nbsp;DOM-элементами (выбор, создание, удаление, перемещение). Познакомился с&nbsp;работой с&nbsp;canvas. Легко работаю с&nbsp;cookies и&nbsp;localStorage. Могу использовать адресную строку для изменения состояния приложения.
+
+    footer.contacts
+      .contacts__title Вам нужен фронтендер?
+      .contacts__container Пишите:
+        br
+        a.contacts__link.contacts__link--email(href="mailto:igor.yarutkin@gmail.com") igor.yarutkin@gmail.com
+        a.contacts__link.contacts__link--vk(href="#") ВКонтакте
+      .contacts__container Звоните:
+        br
+        a.contacts__link(href="tel:+79623218118") +7 962 321-81-18

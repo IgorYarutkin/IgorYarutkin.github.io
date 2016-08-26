@@ -1,0 +1,29 @@
+.title {
+  margin-bottom: 40px;
+}
+.title__name {
+  margin: 20px auto 40px;
+  text-align: center;
+}
+.title__name span {
+  display: block;
+  font-weight: 300;
+  font-size: 14px;
+}
+.title__avatar {
+  margin-bottom: 0;
+}
+.title__avatar img {
+  display: block;
+  margin: 0 auto;
+  border: 1px solid var(--black-light-border);
+  border-radius: 50%;
+}
+.title__description span {
+  font-weight: bold;
+}
+.title__link {
+  &--cv-letter {
+    margin-right: 15px;
+  }
+}
