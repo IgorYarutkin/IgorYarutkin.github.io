@@ -1,0 +1,17 @@
+:root {
+  --font-size-primary: 14px;
+  --font: Arial, sans-serif;
+  --link: #31698a;
+  --link-hover: #3399ff;
+  --link-border: color(var(--link) alpha(25%));
+  --black-light-border: color(#000 alpha(25%));
+  --link-style {
+    color: var(--link);
+    text-decoration: none;
+    border-bottom: 1px solid var(--link-border);
+    &:hover {
+      color: var(--link-hover);
+      border-bottom-color: var(--link-hover);
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.contacts__title {
+  padding-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  border-top: 1px solid color(#000 alpha(25%));
+}
+.contacts__container {
+  margin-top: 10px;
+}
+.contacts__link {
+  &--email {
+    margin-right: 15px;
+  }
+}

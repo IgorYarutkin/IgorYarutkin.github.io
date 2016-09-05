@@ -1,0 +1,11 @@
+.features-list {
+  margin: 0 -5px 40px;
+  font-size: 0;
+}
+.features-list__header {
+  margin: 0 5px 20px;
+  font-size: calc(var(--font-size-primary) * 1.5);
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
