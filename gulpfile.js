@@ -9,6 +9,7 @@ var atImport = require('postcss-import');
 var del = require('del');
 var runSequence = require('run-sequence');
 var normalize = require('postcss-normalize');
+var cssnano = require('cssnano');
 
 gulp.task('html', function buildHTML() {
   return gulp.src('src/*.pug')
@@ -28,6 +29,17 @@ gulp.task('style', function() {
     .pipe(server.reload({stream: true}));
 });
 
+gulp.task('style:min', function() {
+  return gulp.src('src/css/style.css')
+    .pipe(postcss([
+      atImport(),
+      normalize(),
+      cssnext(),
+      cssnano()
+    ]))
+    .pipe(gulp.dest('build/css'));
+});
+
 gulp.task('images', function() {
   return gulp.src('src/img/**/*')
     .pipe(gulp.dest('build/img'));
@@ -35,6 +47,10 @@ gulp.task('images', function() {
 
 gulp.task('clean', function() {
   return del('build/**/*');
+});
+
+gulp.task('build', function() {
+  runSequence('clean', ['html', 'style:min', 'images']);
 });
 
 gulp.task('serve', function() {
